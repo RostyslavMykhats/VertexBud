@@ -113,6 +113,8 @@ body {
     }
 
     .home-page {
+        margin-bottom: 80px;
+
         &__title {
             position: relative;
             z-index: 1;
@@ -200,8 +202,6 @@ body {
             .row {
                 gap: 40px;
 
-                .home-page__title_photo {}
-
                 .btn-switch {
                     left: 0px;
                 }
@@ -212,6 +212,118 @@ body {
                 }
             }
         }
+
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 100px;
+
+        &__text {
+            flex-direction: column;
+            gap: 10px;
+
+            p {
+                font-family: 'Roboto Flex';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 130%;
+                color: #000000;
+            }
+        }
+
+        &__line-left {
+            width: 100px;
+            height: 100px;
+            border-top: 4px solid #FFFFFF;
+            border-right: 4px solid #FFFFFF;
+            position: absolute;
+            left: -110px;
+            top: 0px;
+        }
+
+        &__line-right {
+            width: 100px;
+            height: 100px;
+            border-bottom: 4px solid #FFFFFF;
+            border-left: 4px solid #FFFFFF;
+            position: absolute;
+            right: -110px;
+            bottom: 0px;
+        }
+
+        .about-bg {
+            position: relative;
+
+            .title-section {
+                color: black;
+                font-size: 68px;
+            }
+
+            margin-right: auto;
+            margin-left: auto;
+            margin-left: 0px;
+            background-color: #FFFFFF;
+            padding-left: 40px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-right: 100px;
+        }
+
+        .about-bg2 {
+            position: relative;
+
+            &__line {
+                right: 0px;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border-top: 1px solid #FFFFFF;
+                border-right: 1px solid #FFFFFF;
+            }
+
+            &__img {
+                display: flex;
+                justify-content: end;
+
+                img {
+                    width: 398px;
+                    height: 592px;
+                }
+            }
+
+            margin-top: 50px;
+
+            p {
+                font-family: 'Roboto Flex';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 42px;
+                color: #FFFFFF;
+            }
+
+            &__text2 {
+                padding-right: 100px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                &_strong-text {
+                    font-weight: 1000;
+                    font-size: 30px;
+                    line-height: 42px;
+                }
+            }
+        }
+
+
+
 
     }
 
@@ -236,10 +348,19 @@ body {
         height: 53px;
         border: 2px solid #FFFFFF;
     }
+
+    @media only screen and (max-width:992px) {
+        .about {
+            width: 100%;
+            margin-top: 0px;
+        }
+    }
 }
 
 @media only screen and (max-width:992px) {
     body {
         display: flex;
+        flex-direction: column;
+        align-items: baseline;
     }
 }

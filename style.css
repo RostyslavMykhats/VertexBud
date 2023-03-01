@@ -95,6 +95,9 @@ body .header .main-nav.show .nav-links {
     transition: transform 1s ease;
   }
 }
+body .home-page {
+  margin-bottom: 80px;
+}
 body .home-page__title {
   position: relative;
   z-index: 1;
@@ -176,6 +179,98 @@ body .home-page__title_photo button {
     left: -10px;
   }
 }
+body .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+}
+body .about__text {
+  flex-direction: column;
+  gap: 10px;
+}
+body .about__text p {
+  font-family: "Roboto Flex";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  color: #000000;
+}
+body .about__line-left {
+  width: 100px;
+  height: 100px;
+  border-top: 4px solid #FFFFFF;
+  border-right: 4px solid #FFFFFF;
+  position: absolute;
+  left: -110px;
+  top: 0px;
+}
+body .about__line-right {
+  width: 100px;
+  height: 100px;
+  border-bottom: 4px solid #FFFFFF;
+  border-left: 4px solid #FFFFFF;
+  position: absolute;
+  right: -110px;
+  bottom: 0px;
+}
+body .about .about-bg {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-left: 0px;
+  background-color: #FFFFFF;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 100px;
+}
+body .about .about-bg .title-section {
+  color: black;
+  font-size: 68px;
+}
+body .about .about-bg2 {
+  position: relative;
+  margin-top: 50px;
+}
+body .about .about-bg2__line {
+  right: 0px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-top: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+}
+body .about .about-bg2__img {
+  display: flex;
+  justify-content: end;
+}
+body .about .about-bg2__img img {
+  width: 398px;
+  height: 592px;
+}
+body .about .about-bg2 p {
+  font-family: "Roboto Flex";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 42px;
+  color: #FFFFFF;
+}
+body .about .about-bg2__text2 {
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+body .about .about-bg2__text2_strong-text {
+  font-weight: 1000;
+  font-size: 30px;
+  line-height: 42px;
+}
 body .title-section {
   font-family: "Nasalization";
   font-style: normal;
@@ -196,9 +291,17 @@ body .btn {
   height: 53px;
   border: 2px solid #FFFFFF;
 }
+@media only screen and (max-width: 992px) {
+  body .about {
+    width: 100%;
+    margin-top: 0px;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   body {
     display: flex;
+    flex-direction: column;
+    align-items: baseline;
   }
 }/*# sourceMappingURL=style.css.map */
