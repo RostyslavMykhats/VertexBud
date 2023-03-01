@@ -10,9 +10,6 @@
 body {
   background-color: #132F59;
   position: relative;
-  background-image: url(img/Rectangle\ 7.svg);
-  background-repeat: no-repeat;
-  background-position: left -15px top 20px;
 }
 body .header {
   position: fixed;
@@ -103,6 +100,20 @@ body .home-page__title {
   z-index: 1;
   margin-top: 200px;
 }
+body .home-page__title .svg {
+  position: absolute;
+  top: -180px;
+  left: -110px;
+}
+body .home-page__title .line-for-btn {
+  position: absolute;
+  left: 0px;
+  top: 330px;
+  width: 100px;
+  height: 100px;
+  border-bottom: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+}
 body .home-page p {
   padding-left: 7px;
   white-space: nowrap;
@@ -159,6 +170,10 @@ body .home-page__title_photo button {
   }
   body .home-page .row .btn-switch {
     left: 0px;
+  }
+  body .home-page .row .line-for-btn {
+    top: 215px;
+    left: -10px;
   }
 }
 body .title-section {
