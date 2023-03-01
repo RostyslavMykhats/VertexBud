@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'Nasalization';
+    src: url(fonts/nasalization-rg.otf);
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #132F59;
+    position: relative;
+    background-image: url(img/Rectangle\ 7.svg);
+    background-repeat: no-repeat;
+    background-position: left -15px top 20px;
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 10px 0;
+        background-color: #132F59;
+
+        .main-nav {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #daf8e3;
+        }
+
+        .nav-links {
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 4rem;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    white-space: nowrap;
+                    color: white;
+                    font-family: 'Roboto Flex';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 23px;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .burger {
+            display: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .line {
+            height: 2px;
+            width: 35px;
+            margin: 0.5rem 0;
+            background: #daf8e3;
+            transition: transform 0.75s ease, opacity 0.75s ease;
+        }
+
+        .main-nav.show .line1 {
+            transform: translate(-10px) rotate(45deg) translate(15px);
+        }
+
+        .main-nav.show .line2 {
+            opacity: 0;
+        }
+
+        .main-nav.show .line3 {
+            transform: translate(-10px) rotate(-45deg) translate(15px);
+        }
+
+        .main-nav.show .nav-links {
+            transform: translateX(0%);
+        }
+
+        @media screen and (max-width: 770px) {
+            .main-nav {
+                margin-top: 0px;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 8vh;
+                right: 0;
+                height: 40vh;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                transform: translateX(100%);
+                background-color: #132F59;
+                transition: transform 1s ease;
+            }
+        }
+    }
+
+    .home-page {
+        &__title {
+            position: relative;
+            z-index: 1;
+            margin-top: 200px;
+        }
+
+        p {
+            padding-left: 7px;
+            white-space: nowrap;
+            font-family: 'Roboto Flex';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 26px;
+            line-height: 28px;
+            color: #FFFFFF;
+            letter-spacing: 0.08em;
+        }
+
+        .btn {
+            margin-top: 40px;
+
+            img {
+                margin-left: 45px;
+            }
+        }
+
+        &__title_photo {
+            position: relative;
+            width: 873px;
+            height: 552px;
+
+            .fade {
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            .fade:not(.show) {
+                opacity: 1;
+            }
+
+            @keyframes fade {
+                from {
+                    opacity: .4
+                }
+
+                to {
+                    opacity: 1
+                }
+            }
+
+            .slide {
+                display: none;
+            }
+
+            .btn-switch {
+                position: absolute;
+                bottom: 0px;
+            }
+
+            button {
+                width: 68px;
+                height: 40px;
+                background-color: #FFFFFF;
+                border: none;
+            }
+        }
+
+        @media only screen and (max-width:992px) {
+            .row {
+                padding-right: calc(var(--bs-gutter-x) * .5);
+                padding-left: calc(var(--bs-gutter-x) * .5);
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                
+                .home-page__title_photo {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .btn-switch {
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+    }
+
+    .title-section {
+        font-family: 'Nasalization';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 84px;
+        line-height: 100px;
+        letter-spacing: 0.08em;
+        color: #FFFFFF;
+    }
+
+    .btn {
+        font-family: 'Roboto Flex';
+        font-style: normal;
+        font-weight: 457;
+        font-size: 24px;
+        line-height: 28px;
+        color: #FFFFFF;
+        width: 277px;
+        height: 53px;
+        border: 2px solid #FFFFFF;
+    }
+}
