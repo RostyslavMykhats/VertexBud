@@ -36,6 +36,7 @@ body .header .nav-links {
   flex-direction: row;
   justify-content: center;
   gap: 4rem;
+  padding-left: 0px;
 }
 body .header .nav-links li {
   list-style-type: none;
@@ -156,6 +157,7 @@ body .home-page__title_photo .slide {
   background-position: center;
   background-size: cover;
   background-image: url(img/lance.png);
+  height: 600px;
   display: none;
 }
 body .home-page__title_photo .slide img {
@@ -285,14 +287,10 @@ body .btn {
   .about {
     margin-top: 0px;
   }
-  .slide {
-    height: 600px;
-  }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1201px) {
   .slide {
     width: 100%;
-    height: 600px;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -317,6 +315,20 @@ body .btn {
     transform: scaleX(-1);
   }
 }
+@media only screen and (min-width: 993px) {
+  .line-for-btn {
+    left: 0px;
+    top: 330px;
+  }
+  .about__line-left {
+    left: -60px;
+    top: 0px;
+  }
+  .about__line-right {
+    right: -60px;
+    bottom: 0px;
+  }
+}
 @media only screen and (min-width: 200px) and (max-width: 600px) {
   .title-section {
     font-size: 50px;
@@ -337,19 +349,5 @@ body .btn {
   }
   .home-page__title_photo {
     margin-top: 40px;
-  }
-}
-@media only screen and (min-width: 993px) {
-  .line-for-btn {
-    left: 0px;
-    top: 330px;
-  }
-  .about__line-left {
-    left: -60px;
-    top: 0px;
-  }
-  .about__line-right {
-    right: -60px;
-    bottom: 0px;
   }
 }/*# sourceMappingURL=style.css.map */

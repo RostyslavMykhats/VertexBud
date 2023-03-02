@@ -38,6 +38,7 @@ body {
             flex-direction: row;
             justify-content: center;
             gap: 4rem;
+            padding-left: 0px;
 
             li {
                 list-style-type: none;
@@ -183,6 +184,7 @@ body {
                 background-position: center;
                 background-size: cover;
                 background-image: url(img/lance.png);
+                height: 600px;
 
                 img {
                     object-fit: cover;
@@ -339,19 +341,12 @@ body {
 @media only screen and (max-width:1200px) {
     .about {
         margin-top: 0px;
-
-
-    }
-
-    .slide {
-        height: 600px;
     }
 }
 
-@media only screen and (min-width:1200px) {
+@media only screen and (min-width:1201px) {
     .slide {
         width: 100%;
-        height: 600px;
     }
 }
 
@@ -386,6 +381,27 @@ body {
 
 }
 
+@media only screen and (min-width:993px) {
+    .line-for-btn {
+        left: 0px;
+        top: 330px;
+    }
+
+    
+
+    .about {
+        &__line-left {
+            left: -60px;
+            top: 0px;
+        }
+
+        &__line-right {
+            right: -60px;
+            bottom: 0px;
+        }
+    }
+}
+
 @media only screen and (min-width:200px) and (max-width:600px) {
     .title-section {
         font-size: 50px;
@@ -414,23 +430,3 @@ body {
     }
 }
 
-@media only screen and (min-width:993px) {
-    .line-for-btn {
-        left: 0px;
-        top: 330px;
-    }
-
-    
-
-    .about {
-        &__line-left {
-            left: -60px;
-            top: 0px;
-        }
-
-        &__line-right {
-            right: -60px;
-            bottom: 0px;
-        }
-    }
-}
