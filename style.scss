@@ -104,9 +104,9 @@ body {
 
             .nav-links {
                 position: fixed;
-                top: 7vh;
+                top: 5vh;
                 right: 0;
-                height: 100vh;
+                height: 40vh;
                 width: 100%;
                 flex-direction: column;
                 align-items: center;
@@ -320,7 +320,7 @@ body {
     }
 
     .work {
-        overflow: hidden;
+        overflow-x: clip;
         position: relative;
         background-color: #132F59;
         margin-top: 100px;
@@ -405,6 +405,75 @@ body {
                     line-height: 28px;
                     color: #FFFFFF;
                 }
+            }
+        }
+    }
+
+    .servis {
+        margin-top: 200px;
+        overflow-x: clip;
+
+        .item {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services {
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+        }
+
+        &__img {
+            img {
+                width: 1015px;
+            }
+        }
+
+        &__item {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 20px;
+            position: relative;
+            width: 583px;
+            height: 219px;
+            background-color: #FFFFFF;
+            z-index: 1;
+
+            &_title {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;
+                color: #132F59;
+            }
+
+            &_text {
+                font-family: 'Roboto Flex';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                color: #727272;
+            }
+
+            &_btn {
+                cursor: pointer;
+                display: flex;
+                gap: 15px;
+                align-self: flex-end;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 21px;
+                color: #000000;
+                border: none;
+                background-color: #00000000;
             }
         }
     }

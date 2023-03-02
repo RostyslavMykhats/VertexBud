@@ -89,9 +89,9 @@ body .header .main-nav.show .nav-links {
   }
   body .header .nav-links {
     position: fixed;
-    top: 7vh;
+    top: 5vh;
     right: 0;
-    height: 100vh;
+    height: 40vh;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -267,7 +267,7 @@ body .about .about-bg2__text2_strong-text {
   line-height: 42px;
 }
 body .work {
-  overflow: hidden;
+  overflow-x: clip;
   position: relative;
   background-color: #132F59;
   margin-top: 100px;
@@ -342,6 +342,65 @@ body .work__item_text p {
   font-size: 24px;
   line-height: 28px;
   color: #FFFFFF;
+}
+body .servis {
+  margin-top: 200px;
+  overflow-x: clip;
+}
+body .servis .item {
+  margin-left: auto;
+  margin-right: auto;
+}
+body .servis .services {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+body .servis__img img {
+  width: 1015px;
+}
+body .servis__item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  position: relative;
+  width: 583px;
+  height: 219px;
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+body .servis__item_title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #132F59;
+}
+body .servis__item_text {
+  font-family: "Roboto Flex";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #727272;
+}
+body .servis__item_btn {
+  cursor: pointer;
+  display: flex;
+  gap: 15px;
+  align-self: flex-end;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
 }
 body .title-section {
   font-family: "Nasalization";
