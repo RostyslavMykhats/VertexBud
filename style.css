@@ -113,8 +113,6 @@ body .home-page__title .svg {
 }
 body .home-page__title .line-for-btn {
   position: absolute;
-  left: 0px;
-  top: 330px;
   width: 100px;
   height: 100px;
   border-bottom: 1px solid #FFFFFF;
@@ -155,6 +153,7 @@ body .home-page__title_photo .fade:not(.show) {
   }
 }
 body .home-page__title_photo .slide {
+  background-position: center;
   background-size: cover;
   background-image: url(img/lance.png);
   display: none;
@@ -194,21 +193,23 @@ body .about__text p {
   color: #000000;
 }
 body .about__line-left {
-  width: 100px;
+  z-index: 3;
+  width: 50px;
   height: 100px;
   border-top: 4px solid #FFFFFF;
   border-right: 4px solid #FFFFFF;
   position: absolute;
-  left: -110px;
+  left: -60px;
   top: 0px;
 }
 body .about__line-right {
-  width: 100px;
+  z-index: 3;
+  width: 50px;
   height: 100px;
   border-bottom: 4px solid #FFFFFF;
   border-left: 4px solid #FFFFFF;
   position: absolute;
-  right: -110px;
+  right: -60px;
   bottom: 0px;
 }
 body .about .about-bg {
@@ -240,7 +241,6 @@ body .about .about-bg2__line {
 }
 body .about .about-bg2__img {
   display: flex;
-  justify-content: end;
 }
 body .about .about-bg2__img img {
   width: 398px;
@@ -297,7 +297,6 @@ body .btn {
     display: none;
   }
   .slide {
-    width: auto;
     height: 600px;
   }
 }
@@ -308,14 +307,13 @@ body .btn {
   }
 }
 @media only screen and (max-width: 992px) {
-  body {
-    display: flex;
-    flex-direction: column;
+  .about-bg2__img {
+    justify-content: center;
   }
-  body .row .btn-switch {
+  .btn-switch {
     left: 0px;
   }
-  body .row .line-for-btn {
+  .line-for-btn {
     top: 215px;
     left: -10px;
   }
@@ -329,5 +327,22 @@ body .btn {
   }
   .home-page__title_photo {
     margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .title-section {
+    font-size: 80px;
+  }
+  .home-page p {
+    font-size: 24px;
+  }
+  .home-page__title_photo {
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .line-for-btn {
+    left: 0px;
+    top: 330px;
   }
 }/*# sourceMappingURL=style.css.map */

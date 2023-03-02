@@ -130,8 +130,7 @@ body {
 
             .line-for-btn {
                 position: absolute;
-                left: 0px;
-                top: 330px;
+
                 width: 100px;
                 height: 100px;
                 border-bottom: 1px solid #FFFFFF;
@@ -181,6 +180,7 @@ body {
             }
 
             .slide {
+                background-position: center;
                 background-size: cover;
                 background-image: url(img/lance.png);
 
@@ -228,22 +228,24 @@ body {
         }
 
         &__line-left {
-            width: 100px;
+            z-index: 3;
+            width: 50px;
             height: 100px;
             border-top: 4px solid #FFFFFF;
             border-right: 4px solid #FFFFFF;
             position: absolute;
-            left: -110px;
+            left: -60px;
             top: 0px;
         }
 
         &__line-right {
-            width: 100px;
+            z-index: 3;
+            width: 50px;
             height: 100px;
             border-bottom: 4px solid #FFFFFF;
             border-left: 4px solid #FFFFFF;
             position: absolute;
-            right: -110px;
+            right: -60px;
             bottom: 0px;
         }
 
@@ -279,7 +281,6 @@ body {
 
             &__img {
                 display: flex;
-                justify-content: end;
 
                 img {
                     width: 398px;
@@ -352,7 +353,6 @@ body {
     }
 
     .slide {
-        width: auto;
         height: 600px;
     }
 }
@@ -365,21 +365,18 @@ body {
 }
 
 @media only screen and (max-width:992px) {
-    body {
-        display: flex;
-        flex-direction: column;
 
-        .row {
+    .about-bg2__img {
+        justify-content: center;
+    }
 
-            .btn-switch {
-                left: 0px;
-            }
+    .btn-switch {
+        left: 0px;
+    }
 
-            .line-for-btn {
-                top: 215px;
-                left: -10px;
-            }
-        }
+    .line-for-btn {
+        top: 215px;
+        left: -10px;
     }
 }
 
@@ -394,5 +391,26 @@ body {
 
     .home-page__title_photo {
         margin-top: 40px;
+    }
+}
+
+@media only screen and (min-width:601px) {
+    .title-section {
+        font-size: 80px;
+    }
+
+    .home-page p {
+        font-size: 24px;
+    }
+
+    .home-page__title_photo {
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (min-width:993px) {
+    .line-for-btn {
+        left: 0px;
+        top: 330px;
     }
 }
