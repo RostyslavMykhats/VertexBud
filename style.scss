@@ -234,8 +234,7 @@ body {
             border-top: 4px solid #FFFFFF;
             border-right: 4px solid #FFFFFF;
             position: absolute;
-            left: -60px;
-            top: 0px;
+
         }
 
         &__line-right {
@@ -245,8 +244,7 @@ body {
             border-bottom: 4px solid #FFFFFF;
             border-left: 4px solid #FFFFFF;
             position: absolute;
-            right: -60px;
-            bottom: 0px;
+
         }
 
         .about-bg {
@@ -340,16 +338,9 @@ body {
 
 @media only screen and (max-width:1200px) {
     .about {
-        width: 100%;
         margin-top: 0px;
 
-        &__line-right {
-            display: none;
-        }
 
-        &__line-left {
-            display: none;
-        }
     }
 
     .slide {
@@ -359,7 +350,7 @@ body {
 
 @media only screen and (min-width:1200px) {
     .slide {
-        width: 800px;
+        width: 100%;
         height: 600px;
     }
 }
@@ -378,6 +369,21 @@ body {
         top: 215px;
         left: -10px;
     }
+
+    .about {
+        &__line-left {
+            left: -10px;
+            top: -10px;
+            transform: scaleX(-1);
+        }
+
+        &__line-right {
+            right: -10px;
+            bottom: -10px;
+            transform: scaleX(-1);
+        }
+    }
+
 }
 
 @media only screen and (min-width:200px) and (max-width:600px) {
@@ -412,5 +418,19 @@ body {
     .line-for-btn {
         left: 0px;
         top: 330px;
+    }
+
+    
+
+    .about {
+        &__line-left {
+            left: -60px;
+            top: 0px;
+        }
+
+        &__line-right {
+            right: -60px;
+            bottom: 0px;
+        }
     }
 }

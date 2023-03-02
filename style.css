@@ -199,8 +199,6 @@ body .about__line-left {
   border-top: 4px solid #FFFFFF;
   border-right: 4px solid #FFFFFF;
   position: absolute;
-  left: -60px;
-  top: 0px;
 }
 body .about__line-right {
   z-index: 3;
@@ -209,8 +207,6 @@ body .about__line-right {
   border-bottom: 4px solid #FFFFFF;
   border-left: 4px solid #FFFFFF;
   position: absolute;
-  right: -60px;
-  bottom: 0px;
 }
 body .about .about-bg {
   position: relative;
@@ -287,14 +283,7 @@ body .btn {
 
 @media only screen and (max-width: 1200px) {
   .about {
-    width: 100%;
     margin-top: 0px;
-  }
-  .about__line-right {
-    display: none;
-  }
-  .about__line-left {
-    display: none;
   }
   .slide {
     height: 600px;
@@ -302,7 +291,7 @@ body .btn {
 }
 @media only screen and (min-width: 1200px) {
   .slide {
-    width: 800px;
+    width: 100%;
     height: 600px;
   }
 }
@@ -316,6 +305,16 @@ body .btn {
   .line-for-btn {
     top: 215px;
     left: -10px;
+  }
+  .about__line-left {
+    left: -10px;
+    top: -10px;
+    transform: scaleX(-1);
+  }
+  .about__line-right {
+    right: -10px;
+    bottom: -10px;
+    transform: scaleX(-1);
   }
 }
 @media only screen and (min-width: 200px) and (max-width: 600px) {
@@ -344,5 +343,13 @@ body .btn {
   .line-for-btn {
     left: 0px;
     top: 330px;
+  }
+  .about__line-left {
+    left: -60px;
+    top: 0px;
+  }
+  .about__line-right {
+    right: -60px;
+    bottom: 0px;
   }
 }/*# sourceMappingURL=style.css.map */
