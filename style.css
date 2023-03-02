@@ -159,11 +159,12 @@ body .home-page__title_photo .slide {
   background-size: cover;
   background-image: url(img/lance.png);
   height: 600px;
-  display: none;
 }
-body .home-page__title_photo .slide img {
-  -o-object-fit: cover;
-     object-fit: cover;
+body .home-page__title_photo .slide1 {
+  background-image: url(img/mistobuduvannya.jpg);
+}
+body .home-page__title_photo .slide2 {
+  background-image: url(img/1639149183.jpg);
 }
 body .home-page__title_photo .btn-switch {
   position: absolute;
@@ -338,6 +339,9 @@ body .btn {
 }
 
 @media only screen and (max-width: 1200px) {
+  .slide {
+    width: 100%;
+  }
   .about {
     margin-top: 0px;
   }

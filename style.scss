@@ -187,12 +187,14 @@ body {
                 background-size: cover;
                 background-image: url(img/lance.png);
                 height: 600px;
+            }
 
-                img {
-                    object-fit: cover;
-                }
+            .slide1 {
+                background-image: url(img/mistobuduvannya.jpg);
+            }
 
-                display: none;
+            .slide2 {
+                background-image: url(img/1639149183.jpg);
             }
 
             .btn-switch {
@@ -403,6 +405,10 @@ body {
 }
 
 @media only screen and (max-width:1200px) {
+    .slide {
+        width: 100%;
+    }
+
     .about {
         margin-top: 0px;
     }
