@@ -13,6 +13,7 @@
 body {
     background-image: url(img/Rectangle\ 3.png);
     background-repeat: no-repeat;
+    background-size: 106%;
     background-position: top 300px right 0;
     background-color: #132F59;
     position: relative;
@@ -319,6 +320,7 @@ body {
     }
 
     .work {
+        overflow: hidden;
         position: relative;
         background-color: #132F59;
         margin-top: 100px;
@@ -339,10 +341,25 @@ body {
             margin-bottom: 80px;
         }
 
+        .item-id {
+            position: relative;
+
+            .line-item-left {
+                position: absolute;
+                top: -40px;
+                right: 0px;
+                border-right: 2px solid #FFFFFF;
+                border-top: 2px solid #FFFFFF;
+                width: 900px;
+                height: 100px;
+            }
+        }
+
         &__item {
             display: flex;
             align-items: center;
             margin-bottom: 100px;
+            position: relative;
 
             &_id {
                 height: 130px;
@@ -357,6 +374,18 @@ body {
             }
 
             &_text {
+                position: relative;
+
+                .line-item-rifht {
+                    position: absolute;
+                    left: -2px;
+                    top: -40px;
+                    border-left: 2px solid #FFFFFF;
+                    border-top: 2px solid #FFFFFF;
+                    width: 900px;
+                    height: 100px;
+                }
+
                 padding-left: 20px;
 
                 &_title {
@@ -474,7 +503,7 @@ body {
 
 @media only screen and (min-width:200px) and (max-width:600px) {
     .work__item_text_title {
-        font-size: 30px;
+        font-size: 27px;
     }
 
     .title-section {
