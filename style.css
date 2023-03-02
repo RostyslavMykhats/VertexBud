@@ -8,6 +8,9 @@
 }
 
 body {
+  background-image: url(img/Rectangle\ 3.png);
+  background-repeat: no-repeat;
+  background-position: top 300px right 0;
   background-color: #132F59;
   position: relative;
 }
@@ -123,7 +126,6 @@ body .home-page p {
   font-family: "Roboto Flex";
   font-style: normal;
   font-weight: 400;
-  font-size: 26px;
   line-height: 28px;
   color: #FFFFFF;
   letter-spacing: 0.08em;
@@ -136,8 +138,6 @@ body .home-page .btn img {
 }
 body .home-page__title_photo {
   position: relative;
-  width: 873px;
-  height: 552px;
 }
 body .home-page__title_photo .fade {
   animation-name: fade;
@@ -155,7 +155,13 @@ body .home-page__title_photo .fade:not(.show) {
   }
 }
 body .home-page__title_photo .slide {
+  background-size: cover;
+  background-image: url(img/lance.png);
   display: none;
+}
+body .home-page__title_photo .slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body .home-page__title_photo .btn-switch {
   position: absolute;
@@ -166,18 +172,6 @@ body .home-page__title_photo button {
   height: 40px;
   background-color: #FFFFFF;
   border: none;
-}
-@media only screen and (max-width: 992px) {
-  body .home-page .row {
-    gap: 40px;
-  }
-  body .home-page .row .btn-switch {
-    left: 0px;
-  }
-  body .home-page .row .line-for-btn {
-    top: 215px;
-    left: -10px;
-  }
 }
 body .about {
   display: flex;
@@ -237,7 +231,7 @@ body .about .about-bg2 {
   margin-top: 50px;
 }
 body .about .about-bg2__line {
-  right: 0px;
+  right: 12px;
   position: absolute;
   width: 100px;
   height: 100px;
@@ -275,7 +269,6 @@ body .title-section {
   font-family: "Nasalization";
   font-style: normal;
   font-weight: 400;
-  font-size: 84px;
   line-height: 100px;
   letter-spacing: 0.08em;
   color: #FFFFFF;
@@ -291,17 +284,50 @@ body .btn {
   height: 53px;
   border: 2px solid #FFFFFF;
 }
-@media only screen and (max-width: 992px) {
-  body .about {
+
+@media only screen and (max-width: 1200px) {
+  .about {
     width: 100%;
     margin-top: 0px;
   }
+  .about__line-right {
+    display: none;
+  }
+  .about__line-left {
+    display: none;
+  }
+  .slide {
+    width: auto;
+    height: 600px;
+  }
 }
-
+@media only screen and (min-width: 1200px) {
+  .slide {
+    width: 800px;
+    height: 600px;
+  }
+}
 @media only screen and (max-width: 992px) {
   body {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+  }
+  body .row .btn-switch {
+    left: 0px;
+  }
+  body .row .line-for-btn {
+    top: 215px;
+    left: -10px;
+  }
+}
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+  .title-section {
+    font-size: 50px;
+  }
+  .home-page p {
+    font-size: 18px;
+  }
+  .home-page__title_photo {
+    margin-top: 40px;
   }
 }/*# sourceMappingURL=style.css.map */
