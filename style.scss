@@ -777,6 +777,10 @@ body {
             }
 
             button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
                 margin-top: 20px;
                 font-family: 'Roboto Flex';
                 font-style: normal;
@@ -857,7 +861,7 @@ body {
 @media only screen and (max-width:992px) {
 
     .footer {
-        
+
     }
 
     .footer__menu {
