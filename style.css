@@ -344,10 +344,32 @@ body .work__item_text p {
   color: #FFFFFF;
 }
 body .servis {
-  margin-top: 200px;
+  margin-top: 100px;
   overflow-x: clip;
 }
-body .servis .item {
+body .servis .items-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+body .servis .items-right .servis__item {
+  position: absolute;
+  left: 0px;
+  top: 30px;
+}
+body .servis .items-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+body .servis .items-left .servis__item {
+  position: absolute;
+  right: 0px;
+  top: 30px;
+}
+body .servis .items {
   margin-left: auto;
   margin-right: auto;
 }
@@ -355,9 +377,6 @@ body .servis .services {
   display: flex;
   flex-direction: column;
   gap: 100px;
-}
-body .servis__img img {
-  width: 1015px;
 }
 body .servis__item {
   padding: 20px;
@@ -367,8 +386,6 @@ body .servis__item {
   align-items: start;
   gap: 20px;
   position: relative;
-  width: 583px;
-  height: 219px;
   background-color: #FFFFFF;
   z-index: 1;
 }
@@ -402,6 +419,56 @@ body .servis__item_btn {
   border: none;
   background-color: rgba(0, 0, 0, 0);
 }
+body .about-us {
+  position: relative;
+  margin-top: 100px;
+}
+body .about-us__items {
+  margin-top: 100px;
+  position: relative;
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+body .about-us__img {
+  background-image: url(img/about-us.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 779px;
+}
+body .about-us__item {
+  margin-bottom: 60px;
+}
+body .about-us__item .line-about-us {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0px;
+  height: 80px;
+  border-right: 3px solid #FFFFFF;
+}
+body .about-us__item_title {
+  display: inline-block;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+body .about-us__item p {
+  font-family: "Roboto Flex";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
 body .title-section {
   font-family: "Nasalization";
   font-style: normal;
@@ -423,19 +490,35 @@ body .btn {
 }
 
 @media only screen and (max-width: 1200px) {
+  .items-left .servis__item {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+  }
   .slide {
     width: 100%;
   }
   .about {
     margin-top: 0px;
   }
+  .servis__item {
+    max-width: 583px;
+    min-height: 219px;
+  }
 }
 @media only screen and (min-width: 1201px) {
   .slide {
     width: 100%;
   }
+  .servis__item {
+    width: 583px;
+    height: 219px;
+  }
 }
 @media only screen and (max-width: 992px) {
+  .about-us__img {
+    width: 100%;
+  }
   .about-bg2__img {
     justify-content: center;
   }
@@ -458,9 +541,15 @@ body .btn {
   }
 }
 @media only screen and (min-width: 993px) {
+  .about-us__items {
+    margin-left: 60px;
+  }
   .line-for-btn {
     left: 0px;
     top: 330px;
+  }
+  .about-us__img {
+    width: 560px;
   }
   .about__line-left {
     left: -60px;
