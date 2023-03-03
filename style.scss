@@ -680,6 +680,118 @@ body {
         }
     }
 
+    .footer {
+        margin: 80px 0;
+
+        &__logo {
+            margin-bottom: 40px;
+        }
+
+        &__contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            &_title {
+                margin-top: 10px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 21px;
+                color: #FFFFFF;
+            }
+
+            p {
+                font-family: 'Roboto Flex';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 21px;
+                color: #FFFFFF;
+            }
+        }
+
+        &__menu {
+            &_nav {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding-left: 0px;
+
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        font-family: 'Roboto Flex';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 23px;
+                        color: #FFFFFF;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+
+            &_title {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 21px;
+                color: #FFFFFF;
+            }
+
+            input {
+                height: 40px;
+                width: 350.05px;
+                background-color: #00000000;
+                border: none;
+                border-bottom: 1px solid #FFFFFF;
+                font-family: 'Roboto Flex';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 21px;
+                color: #FFFFFF;
+
+            }
+
+            ::placeholder {
+                font-family: 'Roboto Flex';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 21px;
+                color: #FFFFFF;
+            }
+
+            button {
+                margin-top: 20px;
+                font-family: 'Roboto Flex';
+                font-style: normal;
+                font-weight: 457;
+                font-size: 24px;
+                line-height: 28px;
+                color: #FFFFFF;
+                width: 350px;
+                height: 53px;
+                border: 1px solid #FFFFFF;
+                background-color: #00000000;
+            }
+        }
+    }
+
     .title-section {
         font-family: 'Nasalization';
         font-style: normal;
@@ -744,6 +856,15 @@ body {
 
 @media only screen and (max-width:992px) {
 
+    .footer {
+        
+    }
+
+    .footer__menu {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
     .form__callback {
         input {
             width: 350px;
@@ -805,6 +926,10 @@ body {
 
 @media only screen and (min-width:993px) {
 
+    .footer__menu {
+        margin-bottom: 75px;
+    }
+
     .form__callback {
         input {
             width: 450px;
@@ -854,7 +979,7 @@ body {
 }
 
 @media only screen and (min-width:200px) and (max-width:600px) {
-    
+
 
     .work__item_text_title {
         font-size: 27px;
@@ -874,7 +999,7 @@ body {
 }
 
 @media only screen and (min-width:601px) {
-    
+
 
     .work__item_text_title {
         font-size: 42px;
