@@ -553,6 +553,133 @@ body {
         }
     }
 
+    .form {
+        margin: 100px 0;
+
+        .form-img {
+            position: relative;
+        }
+
+        &__img {
+            background-image: url(img/form.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 448px;
+
+            &_line {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                bottom: -10px;
+                border-left: 2px solid #FFFFFF;
+                border-bottom: 2px solid #FFFFFF;
+            }
+        }
+
+        &__callback {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+
+            &_chbox {
+                gap: 20px;
+                display: flex;
+                font-family: 'Roboto Flex';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                color: #FFFFFF;
+
+                input {
+                    padding: 0;
+                    height: initial;
+                    width: initial;
+                    margin-bottom: 0;
+                    display: none;
+                    cursor: pointer;
+                }
+
+                label {
+                    position: relative;
+                    cursor: pointer;
+                }
+
+                input:checked+label:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 2px;
+                    left: 9px;
+                    width: 6px;
+                    height: 14px;
+                    border: solid white;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                }
+
+                label:before {
+                    content: '';
+                    -webkit-appearance: none;
+                    background-color: transparent;
+                    border: 1px solid white;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+                    padding: 10px;
+                    display: inline-block;
+                    position: relative;
+                    vertical-align: middle;
+                    cursor: pointer;
+                    margin-right: 5px;
+                }
+
+            }
+
+            &_line {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                top: -10px;
+                border-left: 2px solid #FFFFFF;
+                border-top: 2px solid #FFFFFF;
+            }
+
+            #send {
+                height: 80px;
+                border: 2px solid #FFFFFF;
+                background-color: #00000000;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+
+                line-height: 38px;
+                color: #FFFFFF;
+            }
+
+            &_title {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 38px;
+                color: #FFFFFF;
+            }
+
+            input {
+                text-indent: 5px;
+                color: #FFFFFF;
+                border: none;
+                border-bottom: 1px solid #727272;
+                background-color: #00000000;
+            }
+
+            ::placeholder {
+                color: #FFFFFF;
+            }
+        }
+    }
+
     .title-section {
         font-family: 'Nasalization';
         font-style: normal;
@@ -617,6 +744,30 @@ body {
 
 @media only screen and (max-width:992px) {
 
+    .form__callback {
+        input {
+            width: 350px;
+        }
+
+        #send {
+            width: 350px;
+        }
+    }
+
+    .form__callback_line {
+        left: -10px;
+    }
+
+    .form__img_line {
+        transform: scaleX(-1);
+        right: -10px;
+    }
+
+    .form__img {
+        margin-top: 60px;
+        width: 100%;
+    }
+
     .about-us {
         &__img {
             width: 100%;
@@ -654,6 +805,25 @@ body {
 
 @media only screen and (min-width:993px) {
 
+    .form__callback {
+        input {
+            width: 450px;
+        }
+
+        #send {
+            width: 450px;
+        }
+    }
+
+    .form__callback_line {
+        left: -10px;
+    }
+
+    .form__img_line {
+        left: -10px;
+    }
+
+
     .about-us__items {
         margin-left: 60px;
     }
@@ -684,6 +854,8 @@ body {
 }
 
 @media only screen and (min-width:200px) and (max-width:600px) {
+    
+
     .work__item_text_title {
         font-size: 27px;
     }
@@ -702,6 +874,8 @@ body {
 }
 
 @media only screen and (min-width:601px) {
+    
+
     .work__item_text_title {
         font-size: 42px;
     }

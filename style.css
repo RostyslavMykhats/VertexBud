@@ -469,6 +469,119 @@ body .about-us__item p {
   line-height: 21px;
   color: #FFFFFF;
 }
+body .form {
+  margin: 100px 0;
+}
+body .form .form-img {
+  position: relative;
+}
+body .form__img {
+  background-image: url(img/form.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 448px;
+}
+body .form__img_line {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: -10px;
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+}
+body .form__callback {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+body .form__callback_chbox {
+  gap: 20px;
+  display: flex;
+  font-family: "Roboto Flex";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+body .form__callback_chbox input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+body .form__callback_chbox label {
+  position: relative;
+  cursor: pointer;
+}
+body .form__callback_chbox input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+body .form__callback_chbox label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+body .form__callback_line {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -10px;
+  border-left: 2px solid #FFFFFF;
+  border-top: 2px solid #FFFFFF;
+}
+body .form__callback #send {
+  height: 80px;
+  border: 2px solid #FFFFFF;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px;
+  color: #FFFFFF;
+}
+body .form__callback_title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #FFFFFF;
+}
+body .form__callback input {
+  text-indent: 5px;
+  color: #FFFFFF;
+  border: none;
+  border-bottom: 1px solid #727272;
+  background-color: rgba(0, 0, 0, 0);
+}
+body .form__callback ::-moz-placeholder {
+  color: #FFFFFF;
+}
+body .form__callback ::placeholder {
+  color: #FFFFFF;
+}
 body .title-section {
   font-family: "Nasalization";
   font-style: normal;
@@ -516,6 +629,23 @@ body .btn {
   }
 }
 @media only screen and (max-width: 992px) {
+  .form__callback input {
+    width: 350px;
+  }
+  .form__callback #send {
+    width: 350px;
+  }
+  .form__callback_line {
+    left: -10px;
+  }
+  .form__img_line {
+    transform: scaleX(-1);
+    right: -10px;
+  }
+  .form__img {
+    margin-top: 60px;
+    width: 100%;
+  }
   .about-us__img {
     width: 100%;
   }
@@ -541,6 +671,18 @@ body .btn {
   }
 }
 @media only screen and (min-width: 993px) {
+  .form__callback input {
+    width: 450px;
+  }
+  .form__callback #send {
+    width: 450px;
+  }
+  .form__callback_line {
+    left: -10px;
+  }
+  .form__img_line {
+    left: -10px;
+  }
   .about-us__items {
     margin-left: 60px;
   }
