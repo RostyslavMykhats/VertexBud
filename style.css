@@ -89,7 +89,7 @@ body .header .main-nav.show .nav-links {
   }
   body .header .nav-links {
     position: fixed;
-    top: 5vh;
+    top: 7vh;
     right: 0;
     height: 40vh;
     width: 100%;
@@ -675,7 +675,7 @@ body .footer__form ::placeholder {
 body .footer__form button {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: centerg;
   gap: 20px;
   margin-top: 20px;
   font-family: "Roboto Flex";
